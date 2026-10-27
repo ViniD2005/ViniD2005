@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vinicio Arias · Ingeniería de Software</title>
+<meta name="description" content="Portafolio de Erick Vinicio Arias, estudiante de Ingeniería de Software en la Universidad Técnica de Ambato.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#13213C;      /* fondo azul noche */
+    --deep:#1B2E50;     /* superficies */
+    --sky:#9CC3E6;      /* acento frío */
+    --sun:#F2C14E;      /* acento cálido */
+    --paper:#EEF2F7;    /* texto */
+    --muted:#8A9BB4;    /* texto secundario */
+    --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--paper);font:400 1.0625rem/1.65 var(--body)}
+  a{color:var(--sky)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+  .wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+  nav .logo{font:800 1.25rem var(--display);color:var(--sun);text-decoration:none}
+  nav ul{display:flex;gap:1.5rem;list-style:none}
+  nav ul a{color:var(--paper);text-decoration:none}
+  nav ul a:hover{color:var(--sun)}
+
+  /* Hero: el nombre es el elemento protagonista */
+  .hero{padding:5rem 0 4rem;border-bottom:1px solid var(--deep)}
+  .hero h1{font:800 clamp(3.5rem,13vw,10rem)/.88 var(--display);letter-spacing:-.04em;color:var(--paper)}
+  .hero h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--sun)}
+  .hero p{max-width:36rem;margin-top:2rem;font-size:1.25rem;color:var(--sky)}
+  .hero .cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.25rem}
+  .btn{display:inline-block;padding:.8rem 1.4rem;border-radius:.5rem;font-weight:700;text-decoration:none}
+  .btn.primary{background:var(--sun);color:var(--ink)}
+  .btn.ghost{border:2px solid var(--sky);color:var(--sky)}
+  .btn:hover{transform:translateY(-2px)}
+
+  @media (prefers-reduced-motion:no-preference){
+    .hero h1{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+    .hero h1 span{animation:rise .9s .15s cubic-bezier(.2,.8,.2,1) both}
+    @keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  }
+
+  section{padding:4.5rem 0}
+  h2{font:800 clamp(2rem,5vw,3rem)/1.1 var(--display);margin-bottom:2rem}
+
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+  .about p+p{margin-top:1rem}
+  .about dl{display:grid;grid-template-columns:auto 1fr;gap:.6rem 1.5rem;align-content:start}
+  .about dt{color:var(--muted)}
+  .about dd{font-weight:700}
+
+  .stack{display:flex;flex-wrap:wrap;gap:.6rem}
+  .stack li{list-style:none;padding:.45rem .9rem;background:var(--deep);border-radius:2rem;font-size:.95rem}
+  .stack-icons{margin-top:1.75rem;max-width:100%}
+
+  /* Proyectos como filas, no tarjetas idénticas */
+  .projects{list-style:none;border-top:1px solid var(--deep)}
+  .projects li{display:grid;grid-template-columns:2.5rem 1fr auto;gap:1.25rem;align-items:baseline;padding:1.5rem 0;border-bottom:1px solid var(--deep)}
+  .projects .ico{font-size:1.6rem}
+  .projects h3{font:800 1.5rem var(--display)}
+  .projects h3 a{color:var(--paper);text-decoration:none}
+  .projects h3 a:hover{color:var(--sun)}
+  .projects p{color:var(--muted);margin-top:.25rem}
+  .projects .tech{color:var(--sky);font-size:.95rem;text-align:right}
+
+  .stats{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+  .stats img{max-width:100%;height:auto}
+
+  footer{padding:4rem 0 3rem;border-top:1px solid var(--deep)}
+  footer h2{margin-bottom:1rem}
+  footer .links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem}
+  footer small{display:block;margin-top:3rem;color:var(--muted)}
+
+  @media (max-width:760px){
+    nav ul{display:none}
+    .about{grid-template-columns:1fr}
+    .projects li{grid-template-columns:2rem 1fr}
+    .projects .tech{grid-column:2;text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#">VA</a>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Vinicio<span>Arias</span></h1>
+    <p>Estudiante de Ingeniería de Software en la Universidad Técnica de Ambato. Diseño primero la arquitectura y después escribo el código.</p>
+    <div class="cta">
+      <a class="btn primary" href="#proyectos">Ver proyectos</a>
+      <a class="btn ghost" href="https://github.com/ViniD2005" target="_blank" rel="noopener">Mi GitHub</a>
+    </div>
+  </header>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <div class="about">
+      <div>
+        <p>Soy Erick Vinicio Arias, de Ecuador. Me interesa entender cómo funcionan los sistemas por dentro: bases de datos, backend, redes y también los videojuegos.</p>
+        <p>En la universidad he trabajado con Java, C#, PHP y SQL, aplicando Clean Architecture, patrones de diseño y metodologías ágiles en proyectos de equipo con Git y GitFlow.</p>
+      </div>
+      <dl>
+        <dt>Universidad</dt><dd>Técnica de Ambato (UTA)</dd>
+        <dt>Carrera</dt><dd>Ingeniería de Software</dd>
+        <dt>Ubicación</dt><dd>Ecuador</dd>
+        <dt>Enfoque</dt><dd>Backend, datos y videojuegos</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="stack">
+    <h2>Tecnologías</h2>
+    <ul class="stack">
+      <li>Java</li><li>C#</li><li>.NET 8</li><li>Blazor</li><li>PHP</li><li>JavaScript</li>
+      <li>HTML y CSS</li><li>MySQL</li><li>PostgreSQL</li><li>SQL Server</li><li>SSIS y SSAS</li>
+      <li>Power BI</li><li>Godot 4</li><li>Git y GitHub</li><li>NetBeans</li><li>Visual Studio</li>
+    </ul>
+    <img class="stack-icons" src="https://skillicons.dev/icons?i=java,cs,dotnet,php,js,html,css,mysql,postgres,godot,git,github,vscode,visualstudio" alt="Iconos de tecnologías">
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <ul class="projects">
+      <li><span class="ico">🎮</span><div><h3><a href="https://github.com/ViniD2005?tab=repositories">The Incident</a></h3><p>Juego de terror psicológico en 3D.</p></div><span class="tech">Godot 4 · GDScript</span></li>
+      <li><span class="ico">🛒</span><div><h3><a href="https://github.com/ViniD2005?tab=repositories">NorthWind POS</a></h3><p>Punto de venta web con Clean Architecture.</p></div><span class="tech">.NET 8 · Blazor</span></li>
+      <li><span class="ico">🔐</span><div><h3><a href="https://github.com/ViniD2005?tab=repositories">Biblioteca con huella</a></h3><p>Préstamos con lector biométrico y reportes.</p></div><span class="tech">Java · MySQL</span></li>
+      <li><span class="ico">📊</span><div><h3><a href="https://github.com/ViniD2005?tab=repositories">ETL Rendimiento Académico</a></h3><p>Data Warehouse, cubo OLAP y dashboard.</p></div><span class="tech">SSIS · SSAS · Power BI</span></li>
+      <li><span class="ico">🤖</span><div><h3><a href="https://github.com/ViniD2005?tab=repositories">EduMonitor AI</a></h3><p>Middleware docente con agente de IA sobre Moodle.</p></div><span class="tech">Microservicios · Scrum</span></li>
+      <li><span class="ico">🌐</span><div><h3><a href="https://github.com/ViniD2005?tab=repositories">CRUD Estudiantes</a></h3><p>Aplicación web con patrón MVC.</p></div><span class="tech">PHP · MySQL</span></li>
+    </ul>
+  </section>
+
+  <section id="estadisticas">
+    <h2>Actividad en GitHub</h2>
+    <div class="stats">
+      <img src="https://github-readme-stats.vercel.app/api?username=ViniD2005&show_icons=true&hide_border=true&bg_color=1B2E50&title_color=F2C14E&icon_color=9CC3E6&text_color=EEF2F7" alt="Estadísticas de GitHub">
+      <img src="https://streak-stats.demolab.com?user=ViniD2005&hide_border=true&background=1B2E50&ring=F2C14E&fire=F2C14E&currStreakLabel=F2C14E&sideNums=EEF2F7&sideLabels=9CC3E6&dates=8A9BB4&currStreakNum=EEF2F7" alt="Racha de contribuciones">
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <h2>Conectemos</h2>
+    <p>¿Un proyecto, una práctica o una idea? Escríbeme.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:tu-correo@ejemplo.com">Enviar correo</a>
+      <a class="btn ghost" href="https://github.com/ViniD2005" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <small>© 2026 Vinicio Arias · Hecho con HTML y CSS, publicado en GitHub Pages.</small>
+  </footer>
+</div>
+</body>
+</html>
