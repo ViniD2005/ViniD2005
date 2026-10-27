@@ -91,3 +91,4 @@ Me gusta entender cómo funcionan las cosas por dentro: desde una base de datos 
 <p align="center"><i>"Primero la arquitectura, después el código."</i></p>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2E5B8A,100:13213C&height=110&section=footer" />
+
