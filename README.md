@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://github.com/ViniD2005"><img src="https://img.shields.io/badge/GitHub-ViniD2005-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="https://vinid2005.github.io"><img src="https://img.shields.io/badge/Portafolio-vinid2005.github.io-2E5B8A?style=for-the-badge&logo=githubpages&logoColor=white"/></a>
+  <a href="https://vinid2005.github.io/ViniD2005/"><img src="https://img.shields.io/badge/Portafolio-GitHub_Pages-2E5B8A?style=for-the-badge&logo=githubpages&logoColor=white"/></a>
   <img src="https://komarev.com/ghpvc/?username=ViniD2005&label=Visitas&color=F2C14E&style=for-the-badge" />
 </p>
 
@@ -85,7 +85,7 @@ Me gusta entender cómo funcionan las cosas por dentro: desde una base de datos 
 
 <p align="center">
   <a href="https://github.com/ViniD2005"><img src="https://img.shields.io/badge/Sígueme_en_GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="mailto:tu-correo@ejemplo.com"><img src="https://img.shields.io/badge/Escríbeme-2E5B8A?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="mailto:ariasvini925@gmail.com"><img src="https://img.shields.io/badge/Escríbeme-2E5B8A?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 </p>
 
 <p align="center"><i>"Primero la arquitectura, después el código."</i></p>
